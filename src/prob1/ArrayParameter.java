@@ -10,9 +10,20 @@ public class ArrayParameter {
 		printCharArray(c); // 수정된 배열 원소 출력
 	}
 
-	static void replaceSpace( char a[] ) {
+	static void replaceSpace(char a[]) {
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == ' ') {
+				a[i] = ',';
+			}
+		}
+		return;
 	}
 
-	static void printCharArray( char a[] ) {
+	static void printCharArray(char a[]) {
+		char[] p = a;
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(p[i]);
+		}
+		System.out.println();
 	}
 }
